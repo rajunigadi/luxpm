@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lux PM</string>
+    <string name="stay_on_the_top_of_your_finance">재무 상황 파악</string>
+    <string name="sub_header">Lorem ipsum 당근, consetetur sadipscing 수년에 걸쳐, 그러나 직경</string>
+    <string name="sign_up">가입하기</string>
+    <string name="login">로그인</string>
+    <string name="email">Email</string>
+    <string name="password">비밀번호</string>
+    <string name="forgot_your_password">비밀번호 찾기</string>
+    <string name="don_t_have_an_account_sign_up">계정이 없으신가요? 가입하기</string>
+    <string name="general_error">문제가 발생했습니다.</string>
+    <string name="retry">다시 해 보다</string>
+    <string name="name">이름</string>
+    <string name="mobile_phone_number">휴대폰 번호</string>
+    <string name="date_of_birth">생년월일</string>
+    <string name="confirm_password">비밀번호 확인</string>
+    <string name="at_least_8_characters">최소 8자 이상</string>
+    <string name="at_least_one_uppercase_letter">최소 하나의 대문자</string>
+    <string name="at_least_one_number">최소 하나의 숫자</string>
+    <string name="at_least_one_special_character">최소 하나의 특수문자</string>
+    <string name="i_agree_to_the_terms_and_conditions">이용약관에 동의합니다</string>
+    <string name="already_have_an_account_login">이미 계정이 있으신가요? 로그인</string>
+    <string name="under_implementation">구현 중</string>
+</resources>

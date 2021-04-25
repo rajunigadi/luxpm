@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.raju.luxpmcoding.view.signup.SignUpViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background">
+
+            <ImageView
+                android:id="@+id/gradation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:src="@drawable/gradation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:gravity="center"
+                android:text="@string/sign_up"
+                android:textAppearance="@style/login_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gradation" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:fontFamily="@font/merriweather"
+                android:text="@string/name"
+                android:textAppearance="@style/login_sub_headers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/merriweather"
+                android:hint="@string/name"
+                android:inputType="textPersonName|textCapWords"
+                android:text="@={vm.name}"
+                android:textAppearance="@style/login_inputs"
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="Luxpm User" />
+
+            <TextView
+                android:id="@+id/tvMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/merriweather"
+                android:text="@string/mobile_phone_number"
+                android:textAppearance="@style/login_sub_headers"
+                app:layout_constraintEnd_toEndOf="@+id/etName"
+                app:layout_constraintStart_toStartOf="@+id/etName"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/merriweather"
+                android:hint="@string/mobile_phone_number"
+                android:inputType="phone"
+                android:text="@={vm.mobile}"
+                android:textAppearance="@style/login_inputs"
+                app:layout_constraintEnd_toEndOf="@+id/tvMobile"
+                app:layout_constraintStart_toStartOf="@+id/tvMobile"
+                app:layout_constraintTop_toBottomOf="@+id/tvMobile" />
+
+            <TextView
+                android:id="@+id/tvDob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/merriweather"
+                android:text="@string/date_of_birth"
+                android:textAppearance="@style/login_sub_headers"
+                app:layout_constraintEnd_toEndOf="@+id/etMobile"
+                app:layout_constraintStart_toStartOf="@+id/etMobile"
+                app:layout_constraintTop_toBottomOf="@+id/etMobile" />
+
+            <EditText
+                android:id="@+id/etDob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/merriweather"
+                android:hint="@string/date_of_birth"
+                android:inputType="phone"
+                android:text="@={vm.dob}"
+                android:textAppearance="@style/login_inputs"
+                app:layout_constraintEnd_toEndOf="@+id/tvDob"
+                app:layout_constraintStart_toStartOf="@+id/tvDob"
+                app:layout_constraintTop_toBottomOf="@+id/tvDob" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/merriweather"
+                android:text="@string/email"
+                android:textAppearance="@style/login_sub_headers"
+                app:layout_constraintEnd_toEndOf="@+id/etDob"
+                app:layout_constraintStart_toStartOf="@+id/etDob"
+                app:layout_constraintTop_toBottomOf="@+id/etDob" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/merriweather"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:text="@={vm.email}"
+                android:textAppearance="@style/login_inputs"
+                app:layout_constraintEnd_toEndOf="@+id/tvEmail"
+                app:layout_constraintStart_toStartOf="@+id/tvEmail"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/merriweather"
+                android:text="@string/password"
+                android:textAppearance="@style/login_sub_headers"
+                app:layout_constraintEnd_toEndOf="@+id/etEmail"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/merriweather"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:text="@={vm.password}"
+                android:textAppearance="@style/login_inputs"
+                app:layout_constraintEnd_toEndOf="@+id/tvPassword"
+                app:layout_constraintStart_toStartOf="@+id/tvPassword"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+
+            <TextView
+                android:id="@+id/tvConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/merriweather"
+                android:text="@string/confirm_password"
+                android:textAppearance="@style/login_sub_headers"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword"
+                app:layout_constraintStart_toStartOf="@+id/etPassword"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/merriweather"
+                android:inputType="textPassword"
+                android:text="@={vm.confirmPassword}"
+                android:textAppearance="@style/login_inputs"
+                app:layout_constraintEnd_toEndOf="@+id/tvConfirmPassword"
+                app:layout_constraintStart_toStartOf="@+id/tvConfirmPassword"
+                app:layout_constraintTop_toBottomOf="@+id/tvConfirmPassword" />
+
+            <RadioButton
+                android:id="@+id/rbChars"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/at_least_8_characters"
+                app:layout_constraintEnd_toStartOf="@+id/rbUpperCase"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+
+            <RadioButton
+                android:id="@+id/rbUpperCase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:text="@string/at_least_one_uppercase_letter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/rbChars"
+                app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+
+            <RadioButton
+                android:id="@+id/rbNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/at_least_one_number"
+                app:layout_constraintEnd_toEndOf="@+id/rbChars"
+                app:layout_constraintStart_toStartOf="@+id/rbChars"
+                app:layout_constraintTop_toBottomOf="@+id/rbChars" />
+
+            <RadioButton
+                android:id="@+id/rbSpecialChar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/at_least_one_special_character"
+                app:layout_constraintEnd_toEndOf="@+id/rbUpperCase"
+                app:layout_constraintStart_toStartOf="@+id/rbUpperCase"
+                app:layout_constraintTop_toBottomOf="@+id/rbUpperCase" />
+
+            <CheckBox
+                android:id="@+id/chkTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/i_agree_to_the_terms_and_conditions"
+                app:layout_constraintEnd_toEndOf="@+id/rbSpecialChar"
+                app:layout_constraintStart_toStartOf="@+id/tvMobile"
+                app:layout_constraintTop_toBottomOf="@+id/rbNumber" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="#3B286D"
+                android:backgroundTint="#3B286D"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/sign_up"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chkTerms" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:text="@string/already_have_an_account_login"
+                android:textAppearance="@style/landing_login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
+                app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
